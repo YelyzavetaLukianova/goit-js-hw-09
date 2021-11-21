@@ -5,4 +5,4 @@ var t,e=arguments[3];!function(e,i){"function"==typeof t&&t.amd?t([],function(){
 },{}],"GyVV":[function(require,module,exports) {
 "use strict";var e=t(require("notiflix"));function t(e){return e&&e.__esModule?e:{default:e}}const o=document.querySelector(".form"),u=document.querySelector('[name="delay"]'),l=document.querySelector('[name="step"]'),n=document.querySelector('[name="amount"]'),r=(t,o)=>new Promise((u,l)=>{setTimeout(()=>{Math.random()>.3?u(e.default.Notify.success(`✅ Fulfilled promise ${t} in ${o}ms`)):l(e.default.Notify.failure(`❌ Rejected promise ${t} in ${o}ms`))},o)}),i=e=>{e.preventDefault();let t=Number(u.value);const o=Number(l.value),i=Number(n.value);for(let u=0;u<i;u+=1)r(u+1,t).then(({position:e,delay:t})=>console.log(`✅ Fulfilled promise ${e} in ${t}ms`)).catch(({position:e,delay:t})=>console.log(`❌ Rejected promise ${e} in ${t}ms`)),t+=o};o.addEventListener("submit",i);
 },{"notiflix":"hWOm"}]},{},["GyVV"], null)
-//# sourceMappingURL=/parcel-project-template/03-promises.acabbc28.js.map
+//# sourceMappingURL=/goit-js-hw-09/03-promises.acabbc28.js.map
