@@ -28,8 +28,9 @@ const options = {
         minutesRef.textContent = padNum(convertMs(time).minutes);
         secondsRef.textContent = padNum(convertMs(time).seconds);
       } else {
-        return Notiflix.Notify.info('Please choose a date in the future');
+        Notiflix.Notify.info('Please choose a date in the future');
         clearInterval(intervalId);
+        return;
 
         // alert('Please choose a date in the future');
       }
